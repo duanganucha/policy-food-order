@@ -36,20 +36,21 @@
   <div class="wrap">
     <p class="muted">มีผลบังคับใช้: 27 ตุลาคม 2569 (2026)</p>
 
-    <p>แอปพลิเคชัน <strong>“สั่งอาหาร”</strong> (“แอป”) เป็นเครื่องมือของเจ้าหน้าที่โรงพยาบาลสำหรับบันทึกและส่งรายการเบิกอาหารผู้ป่วยใน
-    รายหอผู้ป่วย ให้กลุ่มงานโภชนศาสตร์ ใช้ได้เฉพาะเจ้าหน้าที่ที่มีบัญชีผู้ใช้ของโรงพยาบาล
-    นโยบายนี้อธิบายว่าแอปเก็บ ใช้ และคุ้มครองข้อมูลอย่างไร</p>
+    <p>แอปพลิเคชัน <strong>“สั่งอาหาร”</strong> (“แอป”) เป็นเครื่องมือสำหรับเจ้าหน้าที่ขององค์กรที่ดูแลผู้พักอาศัย
+    เช่น อพาร์ตเมนต์ หอพักนักเรียน และสถานดูแลผู้สูงอายุ ใช้บันทึกและส่งรายการอาหารรายมื้อของผู้พักให้ครัวขององค์กร
+    ใช้ได้เฉพาะเจ้าหน้าที่ที่มีบัญชีผู้ใช้ซึ่งองค์กรออกให้ นโยบายนี้อธิบายว่าแอปเก็บ ใช้ และคุ้มครองข้อมูลอย่างไร</p>
 
     <h2>1. ข้อมูลที่แอปใช้</h2>
     <table>
       <tr><th>ข้อมูล</th><th>วัตถุประสงค์</th><th>เก็บที่ใด</th></tr>
-      <tr><td>ชื่อผู้ใช้ รหัสผ่าน และหอผู้ป่วยที่เลือก</td><td>ยืนยันตัวตนเจ้าหน้าที่</td>
-          <td>ส่งไประบบของโรงพยาบาลตอนเข้าสู่ระบบ — บันทึกไว้ในเครื่องเฉพาะเมื่อเลือก “จำการเข้าสู่ระบบ” ลบได้ด้วยปุ่ม “ล้าง”</td></tr>
-      <tr><td>ข้อมูลผู้ป่วยที่จำเป็นต่อการสั่งอาหาร (ชื่อ, HN/AN, เตียง, อายุ, น้ำหนัก/ส่วนสูง, การวินิจฉัย, ผลแล็บที่เกี่ยวกับโภชนาการ)</td>
-          <td>แสดงให้เจ้าหน้าที่เลือกประเภทอาหารให้เหมาะกับผู้ป่วย</td>
-          <td>ดึงจากระบบสารสนเทศของโรงพยาบาลมาแสดงเท่านั้น ไม่บันทึกลงเครื่อง</td></tr>
-      <tr><td>รายการเบิกอาหารที่เจ้าหน้าที่บันทึก</td><td>ส่งให้กลุ่มงานโภชนศาสตร์จัดเตรียมอาหาร</td>
-          <td>ระบบของโรงพยาบาล</td></tr>
+      <tr><td>ชื่อผู้ใช้ รหัสผ่าน และหน่วยงาน/อาคารที่เลือก</td><td>ยืนยันตัวตนเจ้าหน้าที่</td>
+          <td>ส่งไปเซิร์ฟเวอร์ขององค์กรตอนเข้าสู่ระบบ — บันทึกไว้ในเครื่องเฉพาะเมื่อเลือก “จำการเข้าสู่ระบบ” ลบได้ด้วยปุ่ม “ล้าง”</td></tr>
+      <tr><td>ข้อมูลผู้พักที่จำเป็นต่อการสั่งอาหาร (ชื่อ, รหัส, ห้อง, อายุ, น้ำหนัก/ส่วนสูง, ประวัติแพ้อาหาร/แพ้ยา,
+          ข้อจำกัดด้านอาหารและผลตรวจสุขภาพที่เกี่ยวกับโภชนาการ ถ้าองค์กรมีข้อมูลนี้)</td>
+          <td>แสดงให้เจ้าหน้าที่เลือกอาหารให้เหมาะกับผู้พัก</td>
+          <td>ดึงจากระบบขององค์กรมาแสดงเท่านั้น ไม่บันทึกลงเครื่อง</td></tr>
+      <tr><td>รายการอาหารที่เจ้าหน้าที่บันทึก</td><td>ส่งให้ครัวขององค์กรจัดเตรียมอาหาร</td>
+          <td>เซิร์ฟเวอร์ขององค์กร</td></tr>
       <tr><td>รูปโปรไฟล์ (กล้อง/คลังภาพ — ถ้าผู้ใช้เลือก)</td><td>แสดงเป็นรูปประจำตัวในแอป</td>
           <td>ในเครื่องของผู้ใช้เท่านั้น ไม่อัปโหลด</td></tr>
     </table>
@@ -58,21 +59,21 @@
     <ul>
       <li>ไม่มีโฆษณา ไม่ใช้ตัวระบุเพื่อการโฆษณา และไม่ติดตามผู้ใช้ข้ามแอป</li>
       <li>ไม่มีระบบวิเคราะห์การใช้งานหรือรายงานข้อขัดข้องของบุคคลที่สาม</li>
-      <li>ไม่ขาย ไม่แบ่งปัน และไม่ส่งข้อมูลผู้ป่วยหรือผู้ใช้ให้บุคคลที่สาม</li>
+      <li>ไม่ขาย ไม่แบ่งปัน และไม่ส่งข้อมูลผู้พักหรือผู้ใช้ให้บุคคลที่สาม</li>
     </ul>
 
     <h2>3. การรับส่งและความปลอดภัย</h2>
-    <p>แอปติดต่อเฉพาะเซิร์ฟเวอร์ของโรงพยาบาลภายในเครือข่ายของโรงพยาบาล ข้อมูลผู้ป่วยแสดงเฉพาะเจ้าหน้าที่ที่เข้าสู่ระบบสำเร็จ
-    และการเข้าถึงหมดอายุตามรอบเวลาที่ระบบกำหนด การเก็บรักษาข้อมูลผู้ป่วยเป็นไปตามระเบียบของโรงพยาบาลและ
-    พระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562</p>
+    <p>แอปติดต่อเฉพาะเซิร์ฟเวอร์ขององค์กรที่ผู้ใช้สังกัด ผ่านการเชื่อมต่อที่เข้ารหัส (HTTPS)
+    ข้อมูลผู้พักแสดงเฉพาะเจ้าหน้าที่ที่เข้าสู่ระบบสำเร็จ และการเข้าถึงหมดอายุตามรอบเวลาที่ระบบกำหนด
+    องค์กรเป็นผู้ควบคุมข้อมูลของผู้พัก การเก็บรักษาเป็นไปตามระเบียบขององค์กรและพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562</p>
 
     <h2>4. บริการของบุคคลที่สาม</h2>
     <p>แอปโหลดแบบอักษร (Google Fonts) จากเซิร์ฟเวอร์ของ Google ซึ่งได้รับเพียงข้อมูลการเชื่อมต่อทั่วไป (เช่น หมายเลข IP)
-    ไม่ได้รับข้อมูลผู้ป่วยหรือข้อมูลผู้ใช้ ดู <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">นโยบายของ Google</a></p>
+    ไม่ได้รับข้อมูลผู้พักหรือข้อมูลผู้ใช้ ดู <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">นโยบายของ Google</a></p>
 
     <h2>5. สิทธิของผู้ใช้</h2>
     <p>ลบข้อมูลที่บันทึกในเครื่องได้ด้วยการออกจากระบบ ปุ่ม “ล้าง” ในหน้าเข้าสู่ระบบ หรือถอนการติดตั้งแอป
-    เรื่องข้อมูลผู้ป่วยในระบบของโรงพยาบาล ติดต่อโรงพยาบาลตามช่องทางคุ้มครองข้อมูลส่วนบุคคลของโรงพยาบาล</p>
+    เรื่องข้อมูลของผู้พักในระบบขององค์กร ติดต่อองค์กรนั้นตามช่องทางคุ้มครองข้อมูลส่วนบุคคลขององค์กร</p>
 
     <h2>6. การเปลี่ยนแปลงนโยบาย</h2>
     <p>หากมีการแก้ไข จะประกาศในหน้านี้พร้อมวันที่มีผลบังคับใช้ใหม่</p>
@@ -82,20 +83,23 @@
 
     <div class="en">
       <h2 style="margin-top:0">Privacy Policy (English summary)</h2>
-      <p><strong>Food Order</strong> (com.gooddayinnovation.foodorder) is a staff-only tool for hospital ward staff to submit
-      daily patient meal orders to the hospital's nutrition department. Only staff with a hospital account can sign in.</p>
+      <p><strong>Food Order</strong> (com.gooddayinnovation.foodorder) is a staff-only tool for organizations that look after
+      residents — such as apartments, student dormitories and elderly care homes — to send residents' daily meal orders to the
+      organization's kitchen. Only staff with an account issued by their organization can sign in.</p>
       <ul>
-        <li><strong>Sign-in details</strong> are sent to the hospital's server to authenticate, and kept on the device only if
+        <li><strong>Sign-in details</strong> are sent to the organization's server to authenticate, and kept on the device only if
         “remember me” is turned on. They can be cleared from the sign-in screen.</li>
-        <li><strong>Patient information</strong> needed for meal ordering (name, hospital numbers, bed, age, weight/height,
-        diagnosis, nutrition-related lab results) is fetched from the hospital's system for display only and is not stored on the device.</li>
-        <li><strong>Meal orders</strong> entered by staff are sent to the hospital's server.</li>
+        <li><strong>Resident information</strong> needed for meal ordering (name, ID, room, age, weight/height, food and drug
+        allergies, dietary restrictions and nutrition-related health check results where the organization holds them) is fetched
+        from the organization's system for display only and is not stored on the device.</li>
+        <li><strong>Meal orders</strong> entered by staff are sent to the organization's server.</li>
         <li><strong>Profile photo</strong> (optional, camera/photo library) stays on the device and is never uploaded.</li>
         <li>No ads, no advertising identifiers, no tracking, no third-party analytics or crash reporting.
         Data is never sold or shared with third parties.</li>
-        <li>The app talks only to the hospital's own server on the hospital network. Fonts are loaded from Google Fonts,
+        <li>The app talks only to the server of the user's own organization over HTTPS. Fonts are loaded from Google Fonts,
         which receives only standard connection data (e.g. IP address).</li>
-        <li>Patient data is handled under hospital policy and Thailand's Personal Data Protection Act B.E. 2562 (2019).</li>
+        <li>The organization is the controller of its residents' data, handled under its own policy and Thailand's
+        Personal Data Protection Act B.E. 2562 (2019).</li>
       </ul>
       <p>Contact: <a href="mailto:duagnanucha@gmail.com">duagnanucha@gmail.com</a></p>
     </div>
